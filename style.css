@@ -6,12 +6,12 @@ html, body {
     margin: 0;
     background-color: black;
     color: aliceblue;
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 .instruction {
     padding: 20px;
-    /* הטקסט אוטומטית ממוקם משמאל למעלה בגלל שהדף באנגלית */
+
 }
 
 .gameboard {
