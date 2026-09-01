@@ -6,51 +6,55 @@ html, body {
     margin: 0;
     background-color: black;
     color: aliceblue;
-    opacity: 0.7;
+    /* הורדתי את ה-opacity: 0.7 מה-body כדי שכל האתר לא יהיה שקוף, אם אתה רוצה רקע אפור כהה עדיף לשנות את צבע הרקע עצמו */
 }
-/* test
+
 .instruction {
     padding: 20px;
 }
 
-.gameboard {
-    position: relative; /* מאפשר לשכבות שבתוכו לשבת בדיוק עליו */
-    background-color: royalblue;
-    width: 100%;
-    height: 50vh;
+#css-input {
+    width: 300px;
+    height: 100px;
+    font-family: monospace;
+    font-size: 16px;
+    margin-top: 10px;
+    background-color: #333;
+    color: white;
 }
 
-/* שתי השכבות יתפסו בדיוק את כל ה-gameboard וישבו אחת על השנייה */
+.gameboard {
+    position: relative; /* חשוב מאוד: מאפשר לשכבות לשבת בדיוק עליו */
+    display: flex;
+    flex-direction: row;
+    background-color: royalblue;
+    width: 100%;
+    height: 50vh; /* מגדיר בדיוק חצי ממסך התצוגה */
+}
+
+/* שתי השכבות נפרסות על כל הלוח, אחת על השנייה */
 .static-layer, .dynamic-layer {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
+    display: flex; /* מאפשר ל-Flexbox לעבוד על הפוכדור ופיקאצ'ו */
 }
 
-/* מיקום המטרה לשלב הראשו */
+/* הגדרת פתיחה לשלב 1: הפוכדור בצד ימין */
 .static-layer {
-    justify-content: flex-end;/*right */
+    justify-content: flex-end;
 }
 
-/* השכבה של פיקאצ'ו - עליה השחקן מפעיל את פקודות ה-CSS */
-.dynamic-layer {
-
-    /* כברירת מחדל פיקאצ'ו יתחיל בצד שמאל למעלה */
-}
-
-.pokeball{
-    width: 80px;
-    height: 80px;
+.pokeball {
+    width: 10%;
+    height: 20%;
     object-fit: contain;
-    border-radius: 90%;
 }
 
 .pikachu {
-    width: 80px;
-    height: 80px;
+    width: 10%;
+    height: 20%;
     object-fit: contain;
-
 }
