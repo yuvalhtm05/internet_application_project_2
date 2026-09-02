@@ -2,23 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Flexbox Pikachu</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="instruction">
-         <p>game instruction bala bla bal bla</p>
-        <textarea id="css-input" placeholder="enter css comand here"></textarea>
-        <button id="next-lvl-btn" disabled> NEXT LEVEL</button>
+        <!-- Text elements that JavaScript will update -->
+        <h2 id="level-title">Level 1</h2>
+        <p id="level-instructions">Instructions will appear here.</p>
+
+        <textarea id="css-input" placeholder="Type your CSS here..."></textarea>
+        <br>
+        <!-- Added Previous button -->
+        <button id="prev-lvl-btn" disabled>Previous Level</button>
+        <button id="next-lvl-btn" disabled>Next Level</button>
     </div>
+
+    <!-- לוח המשחק -->
     <div class="gameboard">
+        <!-- שכבת המטרה הסטטית (הפוכדור) -->
         <div class="static-layer">
             <img src="pokeball.png" alt="pokeball" class="pokeball">
         </div>
+
+        <!-- שכבת השחקן הדינמית (פיקאצ'ו) -->
         <div class="dynamic-layer">
-            <img src="pikachu.png" alt="pikachu" class="pikachu">
+            <img src="pikachu.png" alt="pikachu" id="pikachu" class="pikachu">
         </div>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
