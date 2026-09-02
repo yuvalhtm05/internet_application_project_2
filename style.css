@@ -6,7 +6,6 @@ html, body {
     margin: 0;
     background-color: black;
     color: aliceblue;
-    /* הורדתי את ה-opacity: 0.7 מה-body כדי שכל האתר לא יהיה שקוף, אם אתה רוצה רקע אפור כהה עדיף לשנות את צבע הרקע עצמו */
 }
 
 .instruction {
@@ -42,19 +41,14 @@ html, body {
     display: flex; /* מאפשר ל-Flexbox לעבוד על הפוכדור ופיקאצ'ו */
 }
 
-/* הגדרת פתיחה לשלב 1: הפוכדור בצד ימין */
-.static-layer {
-    justify-content: flex-end;
-}
-
-.pokeball {
-    width: 10%;
-    height: 20%;
-    object-fit: contain; /* מונע מהתמונה להימעך */
-}
-
-.pikachu {
-    width: 10%;
-    height: 20%;
-    object-fit: contain; /* מונע מהתמונה להימעך */
+/*
+הגדרות התמונות:
+עברנו משימוש באחוזים לפיקסלים והוספנו רווחים כדי שהפוקימונים לא יימעכו בשלב 6
+*/
+.pokeball, .pikachu {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    margin: 5px;
+    flex-shrink: 0; /* מונע מהתמונות להתכווץ כשיש חוסר במקום */
 }
